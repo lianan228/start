@@ -1,0 +1,3 @@
+﻿  指针详解_1.c
+D:\vs1\Project0000\Project_Pointer_Explain\指针详解_1.c(108,1): warning C4047: “初始化”:“int”与“int *”的间接级别不同
+  Project_Pointer_Explain.vcxproj -> D:\vs1\Project0000\Project_Pointer_Explain\Debug\Project_Pointer_Explain.exe
