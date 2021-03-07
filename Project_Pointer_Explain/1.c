@@ -103,26 +103,38 @@
 
 
 
+//int main()
+//{
+//	int n, m, count = 0, i;
+//	int a[10] = { 0 };
+//	printf("Please enter the number:\n");
+//	scanf("%d", &n);
+//	m = n > 0 ? n : -n;
+//	while (m!=0)
+//	{
+//		a[m % 10]++;
+//		m /= 10;
+//		count++;
+//	}
+//	printf("%d: %d bits\n", n, count);
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (a[i]!=0)	
+//		{
+//			printf("%d: %d\n", i, a[i]);
+//		}
+//	}
+//	return 0;
+//}
+
+
 int main()
 {
-	int n, m, count = 0, i;
-	int a[10] = { 0 };
-	printf("Please enter the number:\n");
-	scanf("%d", &n);
-	m = n > 0 ? n : -n;
-	while (m!=0)
+	int x[3][2] = { 0 }, i;
+	for (i = 0; i < 3; i++)
 	{
-		a[m % 10]++;
-		m /= 10;
-		count++;
-	}
-	printf("%d: %d bits\n", n, count);
-	for (i = 0; i < 10; i++)
-	{
-		if (a[i]!=0)
-		{
-			printf("%d: %d\n", i, a[i]);
-		}
+		scanf("%d", x[i]);
+		printf("%3d%3d%3d\n", x[0][0], x[0][1], x[1][0]);
 	}
 	return 0;
 }
