@@ -128,13 +128,77 @@
 //}
 
 
+//int main()
+//{
+//	int x[3][2] = { 0 }, i;
+//	for (i = 0; i < 3; i++)
+//	{
+//		scanf("%d", x[i]);
+//		printf("%3d%3d%3d\n", x[0][0], x[0][1], x[1][0]);
+//	}
+//	return 0;
+//}
+
+
+
+
+//int fun(int m,int n,int arr[])
+//{
+//	int i = m;
+//	for (i; i < m+4; i++)
+//	{
+//		if (i!=m)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return arr;
+//}
+//
+//int main()
+//{
+//	int m,i,n;
+//	int arr[5] = { 0 };
+//	scanf("%d%d", &m,&n);
+//	arr[4] = fun(m,n,arr);
+//	for (i = 0; i < 4; i++);
+//	{
+//		printf("%d ",arr[i]);
+//	}
+//	return 0;
+//}
+
+
+
+
+
+//即约分数
+int fun1(int m, int n)
+{
+	if (m % n != 0)
+	{
+		return 1;
+	}
+	return 0;
+}
+int fun(int from, int to)
+{
+	int fz;//分zi
+	int count = 0;
+	for (fz = from; fz <= to; fz++)
+	{
+		int fm;//分mu
+		for (fm = from; fm <= to; fm++)
+		{
+			if (fun1(fz,fm)==1)
+			{
+				count++;
+			}
+		}
+	}
+}
 int main()
 {
-	int x[3][2] = { 0 }, i;
-	for (i = 0; i < 3; i++)
-	{
-		scanf("%d", x[i]);
-		printf("%3d%3d%3d\n", x[0][0], x[0][1], x[1][0]);
-	}
+	printf("%d\n",fun(1,2020));
 	return 0;
 }
