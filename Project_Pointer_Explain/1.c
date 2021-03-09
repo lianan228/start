@@ -173,32 +173,130 @@
 
 
 //即约分数
-int fun1(int m, int n)
+//int fun1(int m, int n)
+//{
+//	if (m % n != 0)
+//	{
+//		return 1;
+//	}
+//	return 0;
+//}
+//int fun(int from, int to)
+//{
+//	int fz;//分zi
+//	int count = 0;
+//	for (fz = from; fz <= to; fz++)
+//	{
+//		int fm;//分mu
+//		for (fm = from; fm <= to; fm++)
+//		{
+//			if (fun1(fz,fm)==1)
+//			{
+//				count++;
+//			}
+//		}
+//	}
+//}
+//int main()
+//{
+//	printf("%d\n",fun(1,2020));
+//	return 0;
+//}
+
+
+
+
+//int main()
+//{
+//    int n, i, j, t, z = 1;
+//    scanf("%d", &n);
+//    int a[] = { 0 };
+//    for (i = 0; i < n; i++)
+//        scanf("%d", &a[i]);
+//    for (i = 0; i < n; i++) {
+//
+//        for (j = i + 1; z <= n - i - 1; j++, z++)
+//        {
+//            if (a[i] > a[j]) {
+//                t = a[i];
+//                a[i] = a[j];
+//                a[j] = t;
+//            }
+//        }
+//        z = 1;
+//    }
+//    for (i = 0; i < n; i++)
+//        printf("%d ", a[i]);
+//    printf("\n");
+//    return 0;
+//
+//}
+
+
+//蓝桥杯第一题
+//int main()
+//{
+//	int s, n, i;
+//	scanf("%d", &n);
+//	int a[201];
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &a[i]);
+//	}
+//	int j;
+//	for (i = 0; i < n; i++)
+//	{
+//		for (j = i + 1; j < n; j++)
+//		{
+//			if (a[i] > a[j])
+//			{
+//				s = a[j];
+//				a[j] = a[i];
+//				a[i] = s;
+//			}
+//		}
+//	}
+//	for (i = 0; i < n; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	return 0;
+//}
+
+
+
+
+
+//唯一出现的成对数
+int fun(int* arr, int last)
 {
-	if (m % n != 0)
+	int i;
+	for (i = 0; i < 10; i++)
 	{
-		return 1;
-	}
-	return 0;
-}
-int fun(int from, int to)
-{
-	int fz;//分zi
-	int count = 0;
-	for (fz = from; fz <= to; fz++)
-	{
-		int fm;//分mu
-		for (fm = from; fm <= to; fm++)
+		int j;
+		j = arr[i] ^ last;
+		if (j == 0)
 		{
-			if (fun1(fz,fm)==1)
-			{
-				count++;
-			}
+			return 1;
 		}
 	}
 }
 int main()
 {
-	printf("%d\n",fun(1,2020));
+	int i,j;
+	int arr[11] = {0};
+	for (i = 0; i < 10; i++)
+	{
+		arr[i] = i;
+	}
+	int last = 9;
+	arr[10] = last;
+	j = fun(arr, last);
+	if (j == 1)
+	{
+		printf("%d", arr[i]);
+	}
 	return 0;
 }
+
+
