@@ -173,35 +173,36 @@
 
 
 //即约分数
-//int fun1(int m, int n)
-//{
-//	if (m % n != 0)
-//	{
-//		return 1;
-//	}
-//	return 0;
-//}
-//int fun(int from, int to)
-//{
-//	int fz;//分zi
-//	int count = 0;
-//	for (fz = from; fz <= to; fz++)
-//	{
-//		int fm;//分mu
-//		for (fm = from; fm <= to; fm++)
-//		{
-//			if (fun1(fz,fm)==1)
-//			{
-//				count++;
-//			}
-//		}
-//	}
-//}
-//int main()
-//{
-//	printf("%d\n",fun(1,2020));
-//	return 0;
-//}
+int fun1(int m, int n)
+{
+	if (m % n != 0)
+	{
+		return 1;
+	}
+	return 0;
+}
+int fun(int from, int to)
+{
+	int fz;//分zi
+	int count = 0;
+	for (fz = from; fz <= to; fz++)
+	{
+		int fm;//分mu
+		for (fm = from; fm <= to; fm++)
+		{
+			if (fun1(fz,fm)==1)
+			{
+				count++;
+			}
+		}
+	}
+	return count;
+}
+int main()
+{
+	printf("%d\n",fun(1,2020));
+	return 0;
+}
 
 
 
@@ -265,38 +266,82 @@
 
 
 
-
-
 //唯一出现的成对数
-int fun(int* arr, int last)
-{
-	int i;
-	for (i = 0; i < 10; i++)
-	{
-		int j;
-		j = arr[i] ^ last;
-		if (j == 0)
-		{
-			return 1;
-		}
-	}
-}
-int main()
-{
-	int i,j;
-	int arr[11] = {0};
-	for (i = 0; i < 10; i++)
-	{
-		arr[i] = i;
-	}
-	int last = 9;
-	arr[10] = last;
-	j = fun(arr, last);
-	if (j == 1)
-	{
-		printf("%d", arr[i]);
-	}
-	return 0;
-}
+//int fun(int* arr, int last)
+//{
+//	int i;
+//	for (i = 0; i < 10; i++)
+//	{
+//		int j;
+//		j = arr[i] ^ last;
+//		if (j == 0)
+//		{
+//			return 1;
+//		}
+//	}
+//}
+//int main()
+//{
+//	int i,j;
+//	int arr[11] = {0};
+//	for (i = 0; i < 10; i++)
+//	{
+//		arr[i] = i;
+//	}
+//	int last = 9;
+//	arr[10] = last;
+//	j = fun(arr, last);
+//	if (j == 1)
+//	{
+//		printf("%d", arr[i]);
+//	}
+//	return 0;
+//}
+
+
+
+
+
+//找落单数
+//int main()
+//{
+//    int arr[9] = { 1,1,2,2,3,4,4,5,5 };
+//    int num = 0;
+//    for (int i = 0; i < 9; i++) 
+//    {
+//        num ^= arr[i];
+//    }
+//    printf("%d", num);
+//}
+
+
+
+
+
+
+//int main()
+//{
+//	int a, b, c;
+//	scanf("%d%d%d", &a, &b, &c);
+//	if (a < b)
+//	{
+//		int tmp = a;
+//		a = b;
+//		b = tmp;
+//	}
+//	if (a < c)
+//	{
+//		int tmp = a;
+//		a = c;
+//		c = tmp;
+//	}
+//	if (b < c)
+//	{
+//		int tmp = b;
+//		b = c;
+//		c = tmp;
+//	}
+//	printf("%d\n", a);
+//}
 
 
