@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="1.c" />
     <ClCompile Include="指针详解_1.c" />
+    <ClCompile Include="蓝桥杯.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

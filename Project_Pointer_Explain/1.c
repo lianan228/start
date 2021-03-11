@@ -173,36 +173,63 @@
 
 
 //即约分数
-int fun1(int m, int n)
-{
-	if (m % n != 0)
-	{
-		return 1;
-	}
-	return 0;
-}
-int fun(int from, int to)
-{
-	int fz;//分zi
-	int count = 0;
-	for (fz = from; fz <= to; fz++)
-	{
-		int fm;//分mu
-		for (fm = from; fm <= to; fm++)
-		{
-			if (fun1(fz,fm)==1)
-			{
-				count++;
-			}
-		}
-	}
-	return count;
-}
-int main()
-{
-	printf("%d\n",fun(1,2020));
-	return 0;
-}
+//int fun1(int m, int n)
+//{
+//	if (m % n != 0)
+//	{
+//		return 1;
+//	}
+//	return 0;
+//}
+//int fun(int from, int to)
+//{
+//	int fz;//分zi
+//	int count = 0;
+//	for (fz = from; fz <= to; fz++)
+//	{
+//		int fm;//分mu
+//		for (fm = from; fm <= to; fm++)
+//		{
+//			if (fun1(fz,fm)==1)
+//			{
+//				count++;
+//			}
+//		}
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	printf("%d\n",fun(1,2020));
+//	return 0;
+//}
+
+
+
+
+//字符倒叙
+
+
+//int main()
+//{
+//    char strinput[100];
+//    scanf("%[^\n]", &strinput); //除了换行符以外的字符全部接收
+//
+//    char stroutput[100];
+//    int i = 0;
+//    int j = 0;
+//    int len = strlen(strinput);
+//    //逆序拷贝
+//    for (i = len - 1; i >= 0; i--)
+//    {
+//        stroutput[j++] = strinput[i];
+//    }
+//    stroutput[j] = '\0';
+//
+//    printf("%s\n", stroutput);
+//
+//    return 0;
+//}
 
 
 
@@ -345,3 +372,79 @@ int main()
 //}
 
 
+
+//int main()
+//{
+//	char input[20];
+//	scanf("%[^\n]", &input);
+//
+//	char output[20];
+//	int i = 0;
+//	int j = 0;
+//	int len = strlen(input);
+//	for (i = len - 1; i >= 0; i--)
+//	{
+//		output[j++] = input[i];
+//	}
+//	output[j] = '\0';
+//	printf("%s\n", output);
+//	return 0;
+//}
+
+
+
+
+
+//int main()
+//{
+//	int i;
+//	char arr[5];
+//	for (i = 0; i < 5; i++)
+//	{
+//		scanf("%c", &arr[i]);
+//	}
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%c", arr[i] + 4);
+//	}
+//	return 0;
+//}
+
+#include <math.h>
+//int is_prime(int j)
+//{
+//	for (int i = 2; i < sqrt(j); i++)
+//	{
+//		if (j % i == 0)
+//		{
+//			return 0;
+//		}
+//	}
+//	return 1;
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int j;
+//	for (j = 1; j <= n; j++)
+//	{
+//		if (is_prime(j) == 1)
+//			printf("%d ", j);
+//	}
+//	return 0;
+//}
+
+
+
+
+//#define PI 3.14159265358979323
+//int main()
+//{
+//	int r;
+//	scanf("%d", &r);
+//	double s;
+//	s = PI * r * r;
+//	printf("%.7lf\n", s);
+//	return 0;
+//}
