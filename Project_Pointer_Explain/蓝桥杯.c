@@ -173,3 +173,26 @@
 //    }
 //    printf("%d", num);
 //}
+
+
+
+
+//蛇形矩阵
+
+
+
+
+//Tom数
+int main()
+{
+    long sum, n;//long型为长整型
+    sum = 0;
+    scanf("%d", &n);
+    while (n != 0)
+    {
+        sum = sum + n % 10;
+        n = n / 10;
+    }
+    printf("%ld\n", sum);
+    return 0;
+}
