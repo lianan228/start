@@ -183,16 +183,111 @@
 
 
 //Tom数
+//int main()
+//{
+//    long sum, n;//long型为长整型
+//    sum = 0;
+//    scanf("%d", &n);
+//    while (n != 0)
+//    {
+//        sum = sum + n % 10;
+//        n = n / 10;
+//    }
+//    printf("%ld\n", sum);
+//    return 0;
+//}
+
+
+
+
+
+//Fibonacci数列
+//int main()
+//{
+//	int i, n, sum = 0, s1 = 1,s2 = 1;
+//	scanf("%d", &n);
+//	for (i = 3; i <= n; i++)
+//	{
+//		sum = s1 + s2;
+//		s1 = s2;
+//		s2 = sum;
+//	}
+//	printf("%d\n", sum % 10007);
+//	return 0;
+//}
+
+
+//int main(void)
+//{
+//    int n;
+//    int s1 = 1, s2 = 1, s3;
+//    scanf("%d", &n);
+//
+//    int i;
+//    for (i = 3; i <= n; i++)
+//    {
+//        s3 = (s1 + s2) % 10007;
+//        s1 = s2;
+//        s2 = s3;
+//    }
+//
+//    printf("%d\n", s3);
+//
+//    return 0;
+//}
+
+
+
+
+//回文数
+//int main(void)
+//{
+//	int i, a, b, c, d;
+//	for (i = 1001; i < 10000; i++)//1234
+//	{
+//		a = i % 10;
+//		b = i / 10 % 10;
+//		c = i / 100 % 10;
+//		d = i / 1000;
+//		if ((a==d)&&(b==c))
+//		{
+//			printf("%d\n", i);
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+//
 int main()
 {
-    long sum, n;//long型为长整型
-    sum = 0;
-    scanf("%d", &n);
-    while (n != 0)
-    {
-        sum = sum + n % 10;
-        n = n / 10;
-    }
-    printf("%ld\n", sum);
-    return 0;
+	int n, s1, s2, s3, m,count = 0;
+	scanf("%d", &n);
+	scanf("%d %d %d", &s1, &s2, &s3);
+	for (m = 0; m < 100; m++)
+	{
+		s1 += s2 / 2;
+		s2 += s3 / 2;
+		if (s1 % 2 == 1)
+		{
+			s1++;
+			count++;
+			if (s2 % 2 == 1)
+			{
+				s2++;
+				count++;
+				if (s3 % 2 == 1)
+				{
+					s3++;
+					count++;
+				}
+			}
+		}
+		if ((s1 == s2) && (s2 = s3))
+		{
+			break;
+		}
+	}
+	printf("%d\n", count);
 }
