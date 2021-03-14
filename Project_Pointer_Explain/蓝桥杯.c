@@ -485,3 +485,31 @@
 //    }
 //    printf("\n");
 //}
+
+
+
+
+
+
+//ВщевећЪ§
+#define N 1000
+int a[N + 8];
+int main() {
+    int n, i, m, k = -1;
+    scanf("%d", &n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+    scanf("%d", &m);
+    for (i = 0; i < n; i++) {
+        if (a[i] == m) {
+            k = i + 1;
+            printf("%d\n", k);
+            break;
+        }
+    }
+    if (k == -1) {
+        printf("-1");
+    }
+    return 0;
+}
