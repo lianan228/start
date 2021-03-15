@@ -492,24 +492,118 @@
 
 
 //查找整数
-#define N 1000
-int a[N + 8];
-int main() {
-    int n, i, m, k = -1;
-    scanf("%d", &n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &a[i]);
-    }
-    scanf("%d", &m);
-    for (i = 0; i < n; i++) {
-        if (a[i] == m) {
-            k = i + 1;
-            printf("%d\n", k);
-            break;
-        }
-    }
-    if (k == -1) {
-        printf("-1");
-    }
-    return 0;
-}
+//#define N 1000
+//int a[N + 8];
+//int main() {
+//    int n, i, m, k = -1;
+//    scanf("%d", &n);
+//    for (i = 0; i < n; i++) {
+//        scanf("%d", &a[i]);
+//    }
+//    scanf("%d", &m);
+//    for (i = 0; i < n; i++) {
+//        if (a[i] == m) {
+//            k = i + 1;
+//            printf("%d\n", k);
+//            break;
+//        }
+//    }
+//    if (k == -1) {
+//        printf("-1");
+//    }
+//    return 0;
+//}
+
+
+
+
+//黑色星期五
+//int rd(int m)
+//{
+//	if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)
+//	{
+//		return 31;
+//	}
+//	else if (m == 4 || m == 6 || m == 9 || m == 11)
+//	{
+//		return 30;
+//	}
+//	else if (m == 2)
+//		return 29;
+//}
+//int pd(int m)
+//{
+//	if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)
+//	{
+//		return 31;
+//	}
+//	else if (m == 4 || m == 6 || m == 9 || m == 11)
+//	{
+//		return 30;
+//	}
+//	else if (m == 2)
+//		return 28;
+//}
+//int run(int y)
+//{
+//	if ((y % 4 == 0) && (y % 100 != 0)||(y % 400 == 0))
+//	{
+//		return 1;
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int n,i,sum=0,j;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		sum = 0;
+//		for (i = 1; i <= n; i++)
+//		{
+//			if (i!=n)
+//			{
+//				if (run(i) == 1)
+//					sum += 366;
+//				else
+//					sum += 365;
+//			}
+//			else
+//			{
+//				if (run(i) == 1)
+//				{
+//					for (j = 1; j <= 12; j++)
+//					{
+//						sum += 13;
+//						if (sum % 7 == 5)
+//						{
+//							printf("%04d-%02d-13\n",i,j);
+//							sum += rd(j) - 13;
+//						}
+//						else
+//							sum += rd(j) - 13;
+//					}
+//				}
+//				else
+//				{
+//					for (j = 1; j <= 12; j++)
+//					{
+//						sum += 13;
+//						if (sum % 7 == 5)
+//						{
+//							printf("%04d-%02d-13\n",i,j);
+//							sum += pd(j) - 13;
+//						}
+//						else
+//							sum += pd(j) - 13;
+//					}
+//				}
+//			}
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+
+
