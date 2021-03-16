@@ -139,8 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="1.c" />
-    <ClCompile Include="test.c" />
+    <ClCompile Include="蓝桥杯副本1.c" />
+    <ClCompile Include="蓝桥杯副本2.c" />
     <ClCompile Include="指针详解_1.c" />
     <ClCompile Include="蓝桥杯.c" />
   </ItemGroup>

@@ -18,13 +18,13 @@
     <ClCompile Include="指针详解_1.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="1.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="蓝桥杯.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test.c">
+    <ClCompile Include="蓝桥杯副本1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="蓝桥杯副本2.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

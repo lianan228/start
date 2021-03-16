@@ -607,3 +607,88 @@
 
 
 
+//查找整数
+//int main()
+//{
+//	int i, k, n;
+//	scanf("%d", &n);
+//	int a[1001];
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &a[i]);
+//	}
+//	scanf("%d", &k);
+//	for (i = 0; i < n; i++)
+//	{
+//		if (a[i] == k)
+//		{
+//			printf("%d", i + 1);
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+
+
+//数列特征
+//int main()
+//{
+//	int n, a, i = 0, min, max;
+//	int sum = 0;
+//	scanf("%d", &n);
+//	for (; i < n; i++)
+//	{
+//		scanf("%d", &a);
+//		if (i == 0)
+//		{
+//			max = a;
+//			min = a;
+//		}
+//		if (max < a)
+//			max = a;
+//		if (min > a)
+//			min = a;
+//		sum += a;
+//	}
+//	printf("%d\n%d\n%d\n", max, min, sum);
+//	return 0;
+//}
+
+
+//int Min(int arr[], int n)
+//{
+//	int a = 0;
+//	for (n; n > 0; n--)
+//		a = arr[n] < arr[n - 1] ? arr[n] : arr[n - 1];
+//	return a;
+//}
+//int Max(int arr[],int n)
+//{
+//	int a = 0;
+//	for (n; n > 0; n--)
+//		a = arr[n] > arr[n - 1] ? arr[n] : arr[n - 1];
+//	return a;
+//}
+//int main()
+//{
+//	int i, n, arr[1001],sum = 0;
+//	scanf("%d", &n);
+//
+//	for (i = 0; i < n; i++)
+//		scanf("%d", &arr[i]);
+//
+//	for (i = 0; i < n; i++)
+//	{
+//		sum += arr[i];
+//	}
+//	int m, j;
+//	m = Max(arr, n);
+//	j = Min(arr, n);
+//	printf("%d\n", m);
+//	printf("%d\n", j);
+//	printf("%d\n", sum);
+//	return 0;
+//}
