@@ -692,3 +692,115 @@
 //	printf("%d\n", sum);
 //	return 0;
 //}
+
+
+
+
+
+//分糖果
+
+//未解决
+
+//void transfer(int* x, int* tmp, int len, int& ans)
+//{
+//	for (int i = 0; i < len; i++)
+//	{
+//		x[i] = tmp[i] + tmp[(len + i - 1) % len];
+//		//		printf("%d ", x[i]);
+//	}
+//	//	printf("\n");
+//	for (int i = 0; i < len; i++)
+//	{
+//		if (x[i] % 2 != 0)
+//		{
+//			ans++;
+//			x[i]++;
+//		}
+//	}
+//}
+//
+//bool isSame(int* x, int len)
+//{
+//	for (int i = 0; i < len - 1; i++)
+//	{
+//		if (x[i] != x[i + 1])
+//			return false;
+//	}
+//	return true;
+//}
+//
+//int main()
+//{
+//	int n, ans = 0;
+//	int x[105], tmp[105];
+//	scanf("%d", &n);
+//	for (int i = 0; i < n; i++)
+//		scanf("%d", &x[i]);
+//	while (!isSame(x, n))
+//	{
+//		for (int i = 0; i < n; i++)
+//			tmp[i] = x[i] / 2;
+//		transfer(x, tmp, n, ans);
+//	}
+//	printf("%d\n", ans);
+//	return 0;
+//}
+
+
+
+
+
+//模拟计算器
+//void fun(int i, int j, char ch)
+//{
+//	switch (ch)
+//	{
+//	case '+':
+//		printf("%d\n", i + j); break;
+//	case '-':
+//		printf("%d\n", i - j); break;
+//	case '*':
+//		printf("%d\n", i * j); break;
+//	case '/':
+//		printf("%d\n", i / j); break;
+//	case '%':
+//		printf("%d\n", i % j); break;
+//	default:
+//		break;
+//	}
+//}
+//int main()
+//{
+//	int i, j;
+//	char ch;
+//	scanf("%d %d %c", &i, &j, &ch);
+//	fun(i, j, ch);
+//	return 0;
+//}
+
+
+
+
+
+//石头剪刀布
+//enum play { a = -1, b, c = 1};
+//int _play(int p1, int p2)
+//{
+//    if ((p1 == 0 && p2 == 2) || (p1 == 1 && p2 == 0) || (p1 == 2 && p2 == 1))
+//    {
+//         return c;
+//    }
+//    else if ((p2 == 0 && p1 == 2) || (p2 == 1 && p1 == 0) || (p2 == 2 && p1 == 1))
+//    {
+//         return a;
+//    }
+//    else
+//        return b;
+//}
+//int main()
+//{
+//	int i, j;
+//	scanf("%d %d", &i, &j);
+//	printf("%d\n",_play(i,j));
+//    return 0;
+//}
