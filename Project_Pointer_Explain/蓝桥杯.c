@@ -478,9 +478,12 @@
 //    for (i = 3; i <= n; i++)
 //        for (j = 2; j <= i - 1; j++)
 //            a[i][j] = a[i - 1][j - 1] + a[i - 1][j];  /*除两边的数外都等于上两顶数之和*/
-//    for (i = 1; i <= n; i++) {
+//    for (i = 1; i <= n; i++) 
+//    {
 //        for (j = 1; j <= i; j++)  /*j<=i的原因是不输出其它的数，只输出我们想要的数*/
+//        {
 //            printf("%d ", a[i][j]);
+//        }
 //        printf("\n");  /*当一行输出完以后换行继续下一行的输出*/
 //    }
 //    printf("\n");
@@ -766,7 +769,7 @@
 //	case '%':
 //		printf("%d\n", i % j); break;
 //	default:
-//		break;
+//		break;                          
 //	}
 //}
 //int main()
@@ -802,5 +805,9 @@
 //	int i, j;
 //	scanf("%d %d", &i, &j);
 //	printf("%d\n",_play(i,j));
-//    return 0;
+//  return 0;
 //}
+
+
+
+
