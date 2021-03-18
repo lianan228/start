@@ -810,4 +810,182 @@
 
 
 
+//int max(int x, int y)
+//{
+//	int c;
+//	if (x > y)
+//		c = x;
+//	else
+//		c = y;
+//	return (c);
+//}
+//void main()
+//{
+//	int a, b, i;
+//	int max(int x, int y);
+//	scanf("%d,%d",&a,&b);
+//	i = max(a, b);
+//	printf("%d\n", i);
+//}
+
+
+
+
+
+//算法训练 猴子吃包子
+//int main()
+//{
+//	int a, b, c, d, e, f;
+//	int n;
+//	scanf("%d%d%d%d%d%d%d", &a, &b, &c, &d, &e, &f,&n);
+//	
+//	float s1 = (float)d / a;
+//	float s2 = (float)e / b;
+//	float s3 = (float)f / c;
+//	float s = s1 + s2 + s3;
+//	printf("%.*f\n",n, s);
+//	return 0;
+//}
+
+
+
+
+
+
+//字符串合并
+//int main()
+//{
+//	char s1[100], s2[100];
+//	gets(s1);
+//	gets(s2);
+//	printf("%s", strcat(s1, s2));
+//	return 0;
+//}
+
+
+
+
+
+
+//加法练习
+
+
+
+
+//成绩统计
+//int main()
+//{
+//	double a1 = 0, a2 = 0;
+//	int i, n;
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		int s;
+//		scanf("%d", &s);
+//		if (s >= 60)a1++;
+//		if (s >= 85)a2++;
+//	}
+//	a1 = (a1 / n + 0.005) * 100;
+//	a2 = (a2 / n + 0.005) * 100;
+//	printf("%d%%\n%d%%", (int)a1,(int)a2);
+//	return 0;
+//}
+
+
+
+
+//字符串比较
+//int main()
+//{
+//	char a1[11],a2[11];
+//	int i;
+//	scanf("%s%s",&a1, &a2);
+//	int sz1 = strlen(a1);
+//	int sz2 = strlen(a2);
+//	if (sz1 != sz2)
+//		printf("1");
+//	else
+//	{
+//		if (!strcmp(a1,a2))
+//			printf("2");
+//		else
+//		{
+//			for (i = 0; i < sz1; i++)
+//			{
+//				if (abs(a1[i] - a2[i]) == 32 || a1[i] == a2[i])
+//					printf("3");
+//				else
+//				{
+//					for (i = 0; i < sz1; i++)
+//					{
+//						if (a1[i]!=a2[i])
+//						{
+//							printf("4");
+//							break;
+//						}
+//					}
+//				}
+//				break;
+//			}
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+
+//五次方数
+//int main() {
+//    for (int i = 1000; i <= 999999; i++) {
+//        int t1 = i % 10, t2 = i / 10 % 10, t3 = i / 100 % 10, t4 = i / 1000 % 10, t5 = i / 10000 % 10, t6 = i / 100000;//分别是个,十,白,千,万,十万位
+//        if (pow(t1, 5) + pow(t2, 5) + pow(t3, 5) + pow(t4, 5) + pow(t5, 5) + pow(t6, 5) == i)
+//            printf("%d\n", i);
+//    }
+//    return 0;
+//}
+
+
+
+
+
+//乘法运算
+//int main()
+//{
+//	int m, n;
+//	scanf("%d%d", &m, &n);
+//	printf("%4d\n", m);
+//	printf("×%3d\n", n);
+//	printf("━━━\n");
+//	if (m>10&&n>10)
+//	{
+//		int i = n % 10;
+//		printf("%4d\n", m * i);
+//		int j = n / 10;
+//		printf("%3d \n", m * j);
+//		printf("━━━\n");
+//	}
+//	printf("%4d\n", m * n);
+//	return 0;
+//}
+
+
+
+
+//不同的单词统计
+int main()
+{
+	char s[101];
+	gets(s);
+	int count = 1;
+	for (int i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] == ' ')
+		{
+			count++;
+		}
+	}
+	printf("%d\n", count);
+	return 0;
+}
 
