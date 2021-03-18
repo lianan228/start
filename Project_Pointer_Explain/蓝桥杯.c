@@ -973,19 +973,35 @@
 
 
 //不同的单词统计
+//int main()
+//{
+//	char s[101];
+//	gets(s);
+//	int count = 1;
+//	for (int i = 0; s[i] != '\0'; i++)
+//	{
+//		if (s[i] == ' ')
+//		{
+//			count++;
+//		}
+//	}
+//	printf("%d\n", count);
+//	return 0;
+//}
+
+
+
 int main()
 {
-	char s[101];
-	gets(s);
-	int count = 1;
-	for (int i = 0; s[i] != '\0'; i++)
+	int n,arr[101], sum = 0;
+	scanf("%d", &n);
+	float output;
+	for (int i = 0; i < n; i++)
 	{
-		if (s[i] == ' ')
-		{
-			count++;
-		}
+		scanf("%d", &arr[i]);
+		sum += arr[i];
 	}
-	printf("%d\n", count);
+	output = (float)sum / n;
+	printf("%f\n", output);
 	return 0;
 }
-
