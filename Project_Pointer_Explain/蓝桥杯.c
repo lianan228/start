@@ -991,17 +991,166 @@
 
 
 
-int main()
-{
-	int n,arr[101], sum = 0;
-	scanf("%d", &n);
-	float output;
-	for (int i = 0; i < n; i++)
-	{
-		scanf("%d", &arr[i]);
-		sum += arr[i];
-	}
-	output = (float)sum / n;
-	printf("%f\n", output);
-	return 0;
+//int main()
+//{
+//	int n,arr[101], sum = 0;
+//	scanf("%d", &n);
+//	float output;
+//	for (int i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//		sum += arr[i];
+//	}
+//	output = (float)sum / n;
+//	printf("%f\n", output);
+//	return 0;
+//}
+
+
+
+
+//数据交换
+//void swap(int a, int b)
+//{
+//	int tmp;
+//	tmp = a;
+//	a = b;
+//	b = tmp;
+//	printf("%d %d", a, b);
+//}
+//int main()
+//{
+//	int a, b;
+//	scanf("%d%d", &a, &b);
+//	swap(a, b);
+//	return 0;
+//}
+
+
+//即约分数
+//int fun1(int fz, int fm)
+//{
+//	if (fz % fm != 0)
+//	{
+//		return fun1(fm, fz % fm);
+//	}
+//	return fm;
+//}
+//int fun(int from, int to)
+//{
+//	int gs = 0;
+//	int fz;
+//	for (fz = from; fz <= to; fz++)
+//	{
+//		int fm;
+//		for (fm = from; fm <= to; fm++)
+//		{
+//			if (fun1(fz,fm) == 1)
+//			{
+//				gs++;
+//			}
+//		}
+//	}
+//	return gs;
+//}
+//int main()
+//{
+//	printf("%d\n", fun(1, 2020));
+//	return 0;
+//}
+
+
+
+
+//最长单词
+//int main()
+//{
+//	char ch[1001];
+//	int count = 0, max = 0, j = 0;;//j记录单词末尾字母位置
+//	gets(ch);
+//	for (int i = 0; ch[i] != '\0'; i++)
+//	{
+//		count++;
+//		if (ch[i] == ' ')
+//		{
+//			count = 0;
+//		}
+//		else if (count > max)
+//		{
+//			max = count;
+//			j = i;
+//		}
+//	}
+//	for (int i = j - max + 1; i <= j; i++)
+//	{
+//		printf("%c", ch[i]);
+//	}
+//	return 0;
+//}
+
+
+
+
+
+
+
+//int main()
+//{
+//	int n = 78120;
+//	int count = 0;
+//	for (int i = 1; i <= n; i++)
+//	{
+//		if (n%i == 0)
+//		{
+//			count++;
+//		}
+//	}
+//	printf("%d\n", count);
+//	return 0;
+//}
+
+
+
+
+
+
+//2020蓝桥杯c组c语言
+//试题A
+//美丽的2
+//int main()
+//{
+//	int a, b, c, d,count=0;
+//	for (int n = 1; n <= 2020; n++)
+//	{
+//		a = n / 1000;
+//		b = n / 100 % 10;
+//		c = n / 10 % 10;
+//		d = n % 10;
+//		if ((a == 2) || (b == 2) || (c == 2) || (d == 2))
+//			count++;
+//	}
+//	printf("%d\n", count);
+//	return 0;
+//}
+
+
+
+
+int main() {
+    int a = 0;  // 素数的个数
+    int num = 0;  // 输入的整数
+    printf("输入一个整数：");
+    scanf("%d", &num);
+    for (int i = 2; i < num; i++) {
+        if (num % i == 0) {
+            a++;  // 素数个数加1
+        }
+    }
+    if (a == 0) {
+        printf("%d是素数。\n", num);
+    }
+    else {
+        printf("%d不是素数。\n", num);
+    }
+    return 0;
 }
