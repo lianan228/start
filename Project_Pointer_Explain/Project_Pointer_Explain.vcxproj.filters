@@ -27,5 +27,8 @@
     <ClCompile Include="蓝桥杯副本2.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="dfs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
