@@ -1154,3 +1154,43 @@
 //    }
 //    return 0;
 //}
+
+
+
+
+
+//¹êÍÃÈüÅÜ
+int fun(int v1, int v2,int t,int s,int l)
+{
+	int sum1 = 0,sum2 = 0;
+	for (int i = 1;;)
+	{
+		sum1 += v1 * i;
+		sum2 += v2 * i;
+		if (sum1 > sum2 + t)
+			sum2 += v2 * s;
+		if (sum1 == l)
+		{
+			printf("R\n");
+			break;
+		}
+		else if (sum2 == l)
+		{
+			printf("T\n");
+			break;
+		}
+		else if (sum1 = sum2 == l)
+		{
+			printf("D\n");
+			break;
+		}
+	}
+	printf("%.2f\n", (float)l / v1);
+}
+int main()
+{
+	int v1,v2,t,s,l;
+	scanf("%d%d%d%d%d", &v1, &v2, &t, &s, &l);
+	fun(v1,v2,t,s,l);
+	return 0;
+}
