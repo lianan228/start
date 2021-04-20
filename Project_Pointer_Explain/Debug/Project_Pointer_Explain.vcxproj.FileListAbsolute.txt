@@ -1,2 +1,0 @@
-D:\vs1\Project0000\Project_Pointer_Explain\Debug\Project_Pointer_Explain.exe
-D:\vs1\Project0000\Project_Pointer_Explain\Debug\Project_Pointer_Explain.pdb
