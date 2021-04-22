@@ -9,7 +9,7 @@ public class For_Demo01 {
         }
 
         //100.for
-
+        int z = 0;
         int oddSum = 0;
         int evenSum = 0;
         for (int i = 0; i <= 100; i++) {
