@@ -1,4 +1,4 @@
-package com.longxi.www.OOP;
+package com.longxi.www.OOP.Demo02;
 
 //Demo01类
 public class Demo01 {
