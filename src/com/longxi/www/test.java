@@ -22,24 +22,17 @@ import java.util.Scanner;
  */
 
 public class test {
+
+    static int[] arr2 = new int[100];
+    static int[][] arr = new int[10][10];
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int b = scanner.nextInt();
 
-        int[][] arr = new int[b][b];
-        int[] arr2 = new int[100];
-        for (int i = 0; i < b; i++) {
-            for (int j = 0; j <= i; j++) {
-                if (j == 0 || j == i){
-                    arr[i][j] = 1;
-                }
-                else {
-                    arr[i][j] = arr[i-1][j] + arr[i-1][j-1];
-                }
-                System.out.print(arr[i][j]+" ");
-            }
-            System.out.println();
-        }
+        System.out.println("输入行数:");
+        //调用打印函数
+        print(b);
         int k = 0;
         for (int i = 0; i < b; i++) {
             for (int j = 0; j <= i; j++) {
@@ -58,6 +51,22 @@ public class test {
                 break;
             }
         }
-        System.out.println(cnt);
+        System.out.println(cnt );
+    }
+
+    //打印函数
+    public static void print(int b){
+        for (int i = 0; i < b; i++) {
+            for (int j = 0; j <= i; j++) {
+                if (j == 0 || j == i){
+                    arr[i][j] = 1;
+                }
+                else {
+                    arr[i][j] = arr[i-1][j] + arr[i-1][j-1];
+                }
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
 }

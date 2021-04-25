@@ -20,6 +20,7 @@ public class Demo04 {
         System.out.println(person);//null
 
         Demo04.change(person);
+        //change(person);
         System.out.println(person.name);//珑玺
     }
 

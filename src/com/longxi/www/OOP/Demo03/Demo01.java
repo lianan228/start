@@ -19,7 +19,15 @@ public class Demo01 {
                 Boolean：false
                 引用：null
             修饰符  属性类型 属性名 = 属性值
-         5.
+         5.对象的创建和使用
+            1.必须使用new 关键字创造对象 构造器  Person longxi =  new Person()
+            2.对象的属性 longxi.name
+            3.对象的方法 longxi.sleep();
+         6.类
+            静态的属性：属性
+            动态的行为：方法
+
+         封装 继承 多态
          */
     }
 
