@@ -1,6 +1,7 @@
-package com.longxi.www;
+package com.longxi.www.Test;
 
-public class Print {
+public class Print extends test{
+
     public void print(){
         for (int i = 1; i <= 9; i++) {
             for (int j = 1; j <= i; j++) {

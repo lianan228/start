@@ -14,12 +14,14 @@ public class Application {
 
         xiaoming.name = "小明";
         xiaoming.age = 3;
-        System.out.println(xiaoming.name);//null
-        System.out.println(xiaoming.age);
+        System.out.println(xiaoming.name);//小明
+        System.out.println(xiaoming.age);//3
 
 
         //new 实例化了一个对象
+        Person person1 = new Person("涟安");
         Person person = new Person("珑玺");
         System.out.println(person.name);//珑玺
+        System.out.println(person1.name);//涟安
     }
 }

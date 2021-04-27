@@ -14,8 +14,11 @@ public class Application {
         Person s2 = new Student();
         Object s3 = new Student();
 
+        Person person = new Teacher();
 
-
+        person.run();
+        //不能调用子类独有的方法  go为Teacher类的私有方法
+        //person.go();
         s2.run();
         s1.run();
         //都是song

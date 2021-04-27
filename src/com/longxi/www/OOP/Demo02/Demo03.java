@@ -6,8 +6,6 @@ public class Demo03 {
         //Demo03 demo03 = new Demo03();
         //demo03.add(1,2);
 
-        Demo01 demo01 = new Demo01();
-
         //方法的调用
         students students = new students();
         students.say();

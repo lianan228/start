@@ -1,6 +1,6 @@
 package com.longxi.www.OOP.Demo07;
 //static:
-public class Student {
+public class Student extends Person{
 
     private static int age;//静态变量
     private double score;//非静态变量

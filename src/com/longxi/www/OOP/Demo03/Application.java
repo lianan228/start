@@ -4,6 +4,11 @@ public class Application {
 
     public static void main(String[] args) {
 
+        Pet tiger = new Pet();
+        tiger.name = "嗷呜";
+        tiger.age = 12;
+        tiger.shout();
+
         Pet dog = new Pet();
         dog.name= "旺财";
         dog.age = 3;

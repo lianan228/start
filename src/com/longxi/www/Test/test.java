@@ -1,4 +1,4 @@
-package com.longxi.www;
+package com.longxi.www.Test;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -25,6 +25,8 @@ public class test {
 
     static int[] arr2 = new int[100];
     static int[][] arr = new int[10][10];
+    static int[] b;
+    public Object print;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -32,7 +34,7 @@ public class test {
 
         System.out.println("输入行数:");
         //调用打印函数
-        print(b);
+        //print(b);
         int k = 0;
         for (int i = 0; i < b; i++) {
             for (int j = 0; j <= i; j++) {
@@ -54,8 +56,11 @@ public class test {
         System.out.println(cnt );
     }
 
+    public void print() {
+    }
+
     //打印函数
-    public static void print(int b){
+    /*public static void print(int b){
         for (int i = 0; i < b; i++) {
             for (int j = 0; j <= i; j++) {
                 if (j == 0 || j == i){
@@ -68,5 +73,5 @@ public class test {
             }
             System.out.println();
         }
-    }
+    }*/
 }
