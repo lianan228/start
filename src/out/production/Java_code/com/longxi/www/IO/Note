@@ -1,0 +1,14 @@
+IO流分类
+    流向：（不管是输入流还是输出流都是相对于你当前的程序而言的）
+        输入流（read） input
+        输出流（write）output
+    传输的内容分为
+        字节数据：图片、音频、视频等
+            字节输入流：InputStream
+            字节输出流：OutputStream
+        字符数据：abcd
+            字符输入流：Reader
+            字符输出流：Writer
+
+
+    不管是字节流还是字符流，底层流动的都是字！
