@@ -32,7 +32,6 @@ public class Demo06 {
         System.out.println(file1.length());//0
         //编辑内容后该方法返回值不再为0
 
-
         //最后一次修改的时间
         long time = file1.lastModified();
         Date date = new Date(time);

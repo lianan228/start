@@ -12,3 +12,35 @@ IO流分类
 
 
     不管是字节流还是字符流，底层流动的都是字！
+
+
+
+方法：
+    File file = new File("C:\\Users\\涟安\\Desktop\\Desktop\\a.txt");     “”中是路径和文件名
+    createNewFile()     创建新的文件
+    mkdir()             创建新的文件夹
+    delete()            删除文件夹/文件
+    renameTo()          移动到了目标目录下并重命名为
+    getAbsolutePath();  获取绝对路径
+    getPath();          获取相对路径   String path = file1.getPath();
+    getName();          获取名称
+    length();           获取长度，字节数
+    lastModified();     获取最后一次修改的时间，毫秒值    long time = file1.lastModified();
+
+    String[] list();    获取指定目录下的所有文件或者文件夹的名称数组
+    File[] listFiles(); 获取指定目录下的所有文件或者文件夹的File数组
+
+    File file = new File("C:\\Users\\涟安\\Desktop\\Desktop\\新建文件夹");
+    String[] list = file.list();
+    System.out.println(Arrays.toString(list));
+
+    File[] files = file.listFiles();
+    System.out.println(Arrays.toString(files));
+
+    判断功能
+    1.isDirectory(); 判断是否为目录
+    2.isFile();判断是否为文件
+    3.exists(); 判断是否存在
+    4.canRead(); 判断是否可读
+    5.canWrite(); 判断是否可写
+    6.isHidden(); 判断是否隐藏

@@ -17,7 +17,7 @@ public class Demo04 {
         file.renameTo(file2);
 
         //移动文件
-        file1.renameTo(new File("C:\\Users\\涟安\\Desktop\\Desktop\\a\\ccc.txt"));
+        file1.renameTo(new File("C:\\Users\\涟安\\Desktop\\Desktop\\aa\\ccc.txt"));
         //移动到了aa目录下并重命名为ccc.txt
 
         //如果File改名的路径不在当前文件夹下，那么就剪切到目标文件夹并改名

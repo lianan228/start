@@ -9,9 +9,9 @@ public class Demo09 {
         //A.得到所有的文件对象（把所有要改名字的文件变成File对象）
         File file = new File("C:\\Users\\涟安\\Desktop\\Desktop\\新建文件夹 (2)");
 
-            //1.得到所有文件的目录
+        //1.得到所有文件的目录
         File[] files = file.listFiles();
-            //2.通过对这个目录进行File对象的包装，得到下面所有的File对象(listFiles)
+        //2.通过对这个目录进行File对象的包装，得到下面所有的File对象(listFiles)
 
         //B.遍历所有的文件对象，在遍历的过程中对文件进行改名
         for (File file1:files) {
