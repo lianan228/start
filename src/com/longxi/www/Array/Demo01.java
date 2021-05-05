@@ -1,4 +1,4 @@
-package com.longxi.www.array;
+package com.longxi.www.Array;
 
 public class Demo01 {
     public static void main(String[] args) {

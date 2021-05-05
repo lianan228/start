@@ -6,12 +6,14 @@ public class Demo02 {
         StringBuilder stringBuilder = new StringBuilder();
 
         //stringBuilder.append() 添加对象并返回对象本身
-//        StringBuilder stringBuilder1 = stringBuilder.append("hello");
-//        System.out.println("stringBuilder:"+stringBuilder);
-//        System.out.println("stringBuilder:"+stringBuilder1);
-          stringBuilder.append("world");
+
+        //StringBuilder stringBuilder1 = stringBuilder.append("hello");
+        //System.out.println("stringBuilder:"+stringBuilder);
+        //System.out.println("stringBuilder:"+stringBuilder1);
+        stringBuilder.append("world");
         System.out.println(stringBuilder);//world
         //直接追加内容即可
+
         stringBuilder.append(1).append(2);//链式编程
 
         //反转

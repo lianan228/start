@@ -1,4 +1,4 @@
-package com.longxi.www.array;
+package com.longxi.www.Array;
 
 //数组的使用
 

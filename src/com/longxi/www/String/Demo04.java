@@ -13,6 +13,7 @@ public class Demo04 {
 
         //实例化对象
         Demo04 demo04 = new Demo04();
+        //String reverse = demo04.reverse(line);
         System.out.println(demo04.reverse(line));
     }
     public String reverse(String s){

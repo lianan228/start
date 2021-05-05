@@ -12,7 +12,7 @@ public class Demo03 {
 
         //将String转化为StringBuilder
         String s1 = "hello";
-        StringBuilder stringBuilder1 = new StringBuilder(s);
+        StringBuilder stringBuilder1 = new StringBuilder(s1);
         System.out.println(stringBuilder1);
     }
 }

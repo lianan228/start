@@ -1,4 +1,4 @@
-package com.longxi.www.array;
+package com.longxi.www.Array;
 
 //使用
 //增强型循环在数组中的使用

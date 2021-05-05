@@ -1,7 +1,6 @@
-package com.longxi.www.array;
+package com.longxi.www.Array;
 
 //多维数组
-import com.longxi.www.array.Demo04;
 
 public class Demo05 {
     public static void main(String[] args) {

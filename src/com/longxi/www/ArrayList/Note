@@ -1,0 +1,27 @@
+集合
+提供一种存储空间可变的存储模型，存储的数据容量可以发生改变
+集合类有很多
+ArrayList<E>
+可调整大小的数组实现
+<E> 是一种特殊的数据类型，泛型
+出现E的地方我们使用引用数据类型替换即可
+举例: ArrayList<String>,ArrayList<Student>
+
+建立一个空的集合对象
+    ArrayList<String> array = new ArrayList<String>();
+
+1.添加方法
+    (1).追加方法一
+        array.add();
+    (2).追加方法二
+        array.add(index,element);
+        此方法不可越界添加元素 例如 如果没有index:3  则不能直接添加index:4
+        否则报出异常 IndexOutOfBoundsException 集合元素索引越界
+2.常用方法
+      1.remove(Object o) 删除指定元素，返回删除是否成功
+      2.remove(int index) 删除指定索引处的元素，返回被删除的元素
+      3.set(int index，E element) 修改指定索引处的元素，返回被修改的元素
+      4.get(int index) 返回指定索引处的元素
+      5.size()  返回集合中元素的个数
+      //详细见Demo02
+3. ......

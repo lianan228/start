@@ -1,4 +1,4 @@
-package com.longxi.www.array;
+package com.longxi.www.Array;
 
 import java.util.Arrays;
 

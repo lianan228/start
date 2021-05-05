@@ -1,0 +1,21 @@
+StringBuilder
+    0.StringBuilder stringBuilder = new StringBuilder();
+
+    1.StringBuilder内容是可变的
+        (1).StringBuilder stringBuilder = new StringBuilder("Hello");
+            System.out.println(stringBuilder+"World");       HelloWorld
+            System.out.println(stringBuilder.length());      5
+
+    2.stringBuilder.append() 添加对象并返回对象本身
+        (1).StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append("world");   stringBuilder == "world"
+        (2).因为返回对象本身，所以返回的还是一个对象，可以继续调用方法
+            stringBuilder.append(1).append(2);//链式编程
+
+    3.StringBuilder 和 String 相互转换
+        (1).将StringBuilder转化为String
+            StringBuilder stringBuilder = new StringBuilder();
+            String s = stringBuilder.toString();
+        (2).将String转化为StringBuilder
+            String s1 = "hello";
+            StringBuilder stringBuilder = new StringBuilder(s1);

@@ -6,7 +6,6 @@ public class Demo04 {
         //定义一个数组
         int[] arr = {1,2,3};
 
-
         //调用方法，用一个变量接收结果
         String string = arrayToString(arr);
         //输出结果

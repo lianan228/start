@@ -1,4 +1,4 @@
-package com.longxi.www.array;
+package com.longxi.www.Array;
 
 //冒泡排序
 
