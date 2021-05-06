@@ -1,0 +1,16 @@
+1.创建流对象
+    FileOutputStream fos = new FileOutputStream(String name);
+    getBytes(); 返回一个字节数组
+2.读取内容
+    BufferedReader bufferedReader = new BufferedReader(new FileReader(String filename));
+    bufferedReader.readLine();  //读取文件每行的内容
+
+    LineNumberReader lnr = new LineNumberReader(new File(String filename));
+    lnr.getLineNumber()+lnr.readLine();   //读取每行行号和内容
+    setLineNumber();  //设置起始行号
+
+3.创建数据输出流对象
+    DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(String filename));
+    写数据 八种基本类型和String    dataOutputStream.writeByte() 等等 writeUTF(String)
+    DataInputStream dataInputStream = new DataInputStream(new FileInputStream(String filename));
+    读数据 一一对应 不能错位       byte b = dataInputStream.readByte(); 等等

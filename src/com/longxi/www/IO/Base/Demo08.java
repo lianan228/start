@@ -14,13 +14,13 @@ public class Demo08 {
         PrintWriter printWriter = new PrintWriter(new FileWriter("C:\\Users\\涟安\\Desktop\\Desktop\\新建文件夹 (2)\\123_003.txt"),true);
         //两种方法是一样的
 
-        //换行打印
+        //在文件中换行打印
         printWriter.println(true);
         printWriter.println(2);
         printWriter.println('b');
         printWriter.println("hello io!");
         printWriter.println(new Object());
-//        printWriter.close();
+        //printWriter.close();
 
         //内容被修改
     }

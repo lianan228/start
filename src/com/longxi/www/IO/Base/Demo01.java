@@ -12,6 +12,7 @@ package com.longxi.www.IO.Base;
 //相对于此程序输出内容到文件 所以是输出流
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
