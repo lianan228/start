@@ -1,0 +1,72 @@
+File 文件操作
+import java.io.*
+
+1.构造三种文件对象
+    (1) File file = new File(pathname:);
+        直接创建，pathname最后指明创建的文件名
+
+    (2) File file = new File(String parent,String child);
+        parent为目标目录 child为文件名称
+
+    (3) File file = new File(pathname:)
+        File file1 = new File(file,child);
+
+    //第二种方法最常用,第一种尚可
+
+    File file2 = new File("C:\\Users\\涟安\\Desktop\\Desktop\\b");
+    File file2 = new File("C:\\Users\\涟安\\Desktop\\Desktop","b.txt");
+
+2.创建功能
+    (1) public boolean createNewFile(); 创建文件，如果存在这样的文件，就不创建了
+            File file = new File(pathname:);
+            file.createNewFile();  在pathname路径下创建一个文件
+
+    (2) public boolean mkdir(); 创建文件夹，如果存在就不创建
+            File file = new File(pathname:);
+            file.mkdir();  在pathname路径下创建一个文件夹
+
+    (3) public boolean mkdirs(); 创建文件夹 如果父文件夹不存在 会创建出来
+            File file = new File(pathname:);
+            file.mkdirs();  在pathname路径下创建一个文件夹
+
+    此方法可以多层创建文件夹
+    如果没有指明创建文件的路径，那么该文件是被创建在项目路径下的
+    如果路径不存在
+    则不能创建  抛出异常IOException
+
+3.删除功能
+    (1) public boolean delete();
+            File file = new File("C:\\Users\\涟安\\Desktop\\Desktop\\b");
+            file.delete();
+            删除了b文件
+
+    delete方法删除文件夹时，该文件夹内不能有文件或文件夹
+
+4.重命名
+    renameTo();
+        File file = new File("C:\\Users\\涟安\\Desktop\\Desktop\\a");
+        file.mkdir();
+        File file1 = new File("C:\\Users\\涟安\\Desktop\\Desktop\\aa");
+        file.renameTo(file1);
+        将a文件夹重命名为aa
+
+    如果File改名的路径不在当前文件夹下，那么就剪切到目标文件夹并改名
+
+5.判断功能
+    1.isDirectory(); 判断是否为目录
+    2.isFile();判断是否为文件
+    3.exists(); 判断是否存在
+    4.canRead(); 判断是否可读
+    5.canWrite(); 判断是否可写
+    6.isHidden(); 判断是否隐藏
+
+6.获得功能
+    1.getAbsolutePath();获取绝对路径
+    2.getPath();获取相对路径
+    3.getName();获取名称
+    4.length();获取长度，字节数
+    5.lastModified();获取最后一次修改的时间，毫秒值
+
+7.
+    String[] list();获取指定目录下的所有文件或者文件夹的名称数组
+    File[] listFiles();获取指定目录下的所有文件或者文件夹的File数组
