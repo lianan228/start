@@ -1,4 +1,4 @@
-package com.longxi.www.structure;
+package com.longxi.www.Structure;
 
 //选择结构
 

@@ -1,4 +1,4 @@
-package com.longxi.www.structure;
+package com.longxi.www.Structure;
 
 public class For_Demo02 {
     public static void main(String[] args) {

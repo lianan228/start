@@ -33,20 +33,26 @@ public class Application {
             switch (line) {
                 case "1":
                     System.out.println("添加学生");
-
                     AddStudent.addStudent(arrayList);
                     whetherInput(flag);
                     break;
                 case "2":
                     System.out.println("删除学生");
-
+                    DeleteStudent deleteStudent = new DeleteStudent();
+                    deleteStudent.deleteStudent(arrayList);
                     whetherInput(flag);
                     break;
                 case "3":
                     System.out.println("修改学生");
+                    ChangeStudent changeStudent = new ChangeStudent();
+                    changeStudent.changeStudent(arrayList);
+                    whetherInput(flag);
                     break;
                 case "4":
                     System.out.println("查看所有学生");
+                    ShowAllStudent showAllStudent = new ShowAllStudent();
+                    showAllStudent.show(arrayList);
+                    whetherInput(flag);
                     break;
                 case "5":
                     System.out.println("退出程序");

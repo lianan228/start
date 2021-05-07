@@ -1,4 +1,4 @@
-package com.longxi.www.method;
+package com.longxi.www.Method;
 
 //命令行传参
 

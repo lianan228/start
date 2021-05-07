@@ -1,4 +1,4 @@
-package com.longxi.www.structure;
+package com.longxi.www.Structure;
 //顺序结构
 
 public class if_Demo01 {
