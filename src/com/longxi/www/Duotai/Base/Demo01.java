@@ -1,4 +1,4 @@
-package com.longxi.www.Duotai;
+package com.longxi.www.Duotai.Base;
 
 public class Demo01 {
     public static void main(String[] args) {
@@ -12,6 +12,7 @@ public class Demo01 {
         //成员方法   编译看左边，执行看右边
 
         //成员方法有重写，成员变量没有
+        //不能执行子类特有的功能  转型后可以
 
         Use use = new Use();
         Cat cat = new Cat();

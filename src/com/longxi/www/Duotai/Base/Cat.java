@@ -1,4 +1,4 @@
-package com.longxi.www.Duotai;
+package com.longxi.www.Duotai.Base;
 
 public class Cat extends Animal{
     @Override

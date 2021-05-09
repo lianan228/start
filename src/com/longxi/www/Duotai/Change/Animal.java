@@ -1,8 +1,7 @@
-package com.longxi.www.Duotai;
+package com.longxi.www.Duotai.Change;
 
 public class Animal {
-
-    public void eat() {
+    public void eat(){
         System.out.println("吃");
     }
 }
