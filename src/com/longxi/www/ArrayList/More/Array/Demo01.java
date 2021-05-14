@@ -1,4 +1,4 @@
-package com.longxi.www.ArrayList;
+package com.longxi.www.ArrayList.More.Array;
 
 import java.util.ArrayList;
 
@@ -30,7 +30,7 @@ public class Demo01 {
         //之前索引为1的元素顺次后移
         array.add(3,"javaee");
         //如果没有index:3  则不能直接添加index:4
-        //array.add(4,"javase");
+        //array.add(4,"java se");
         //IndexOutOfBoundsException
 
         //输出集合

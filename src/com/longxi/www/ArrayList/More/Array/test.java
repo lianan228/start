@@ -1,4 +1,4 @@
-package com.longxi.www.ArrayList;
+package com.longxi.www.ArrayList.More.Array;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.longxi.www.ArrayList;
+package com.longxi.www.ArrayList.More.Array;
 
 /*
 常用方法

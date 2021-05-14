@@ -1,11 +1,13 @@
-package com.longxi.www.ArrayList;
+package com.longxi.www.ArrayList.More.List;
 
 public class Student {
     private String name;
-    private String age;
+    private int age;
 
-    public Student(){}
-    public Student(String name,String age){
+    public Student(){
+
+    }
+    public Student(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -18,11 +20,11 @@ public class Student {
         this.name = name;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 }

@@ -1,7 +1,6 @@
-package com.longxi.www.ArrayList;
+package com.longxi.www.ArrayList.More.Array;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 //创建一个存储字符串的集合，存储3个字符串元素，实用程序实现在控制台遍历该集合
 public class Demo03 {
