@@ -1,0 +1,30 @@
+Map笔记
+Interface Map<K,V>   K:键的类型  V:值的类型
+将键映射到值的对象，不能包含重复的键，每个键可以映射到最多一个值
+举例:学生的学号和姓名
+    001 涟安
+    002 珑玺
+
+创建Map集合的对象
+多态的方式
+具体的实现类HashMap
+
+1.Map常用功能
+    put(K,V)        添加元素
+    remove(k)       根据键删除值对元素
+    clear()         移除所有的键值对元素
+    containsKey()   判断集合是否包含指定的键
+    containsValue() 判断集合是否包含指定的值
+    isEmpty()       判断集合是否为空
+    size()          集合的长度，键值对的个数
+
+2.Map的获取功能
+     get(Object key)     根据键获取值
+     keySet()            获取所有键的集合
+     values()            获取所有值的集合
+
+3.Map集合的遍历(方式一)
+     获取所有键的集合 keySet
+     遍历键的集合，得到每一个键，用增强for
+     根据键去找值，get
+  (方式二):Set<Map.Entry<K,V>>entrySet(); 获取所有值对对象的集合
