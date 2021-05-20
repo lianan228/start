@@ -14,7 +14,7 @@ public class Demo02 {
         //1.public boolean createNewFile(); 创建文件，如果存在这样的文件，就不创建了
 
         File file = new File("C:\\Users\\涟安\\Desktop\\Desktop\\b.txt");
-        //boolean newFile = file.createNewFile();//ture
+        boolean newFile = file.createNewFile();//ture
         //System.out.println(newFile);
         //file.mkdir();//创建”b.txt“文件夹
         //file.createNewFile();

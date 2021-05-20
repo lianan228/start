@@ -42,11 +42,38 @@ public class Demo01 {
         //通过管道把数据写入文件
         fos.write(bytes);
 
-        //关闭管道 回收
-        fos.close();
+        //write(int b)  一次写一个字节数据
+        //write(byte[] b) 将b.length字节从指定的字节数组写入此文件输入流
+        //一次写一个字节数组的数据
+        //write(byte[] b,int off,int len) 将len字节从指定的字节数组开始，
+        //从偏移量off(索引的位置)开始写入此文件输入流一次写一个字节数组的部分数据
 
+        FileOutputStream fos1 = new FileOutputStream("C:\\Users\\涟安\\Desktop\\Desktop\\新建文件夹 (2)\\123_004.txt",true);
+        //追加内容到末尾 ture
+
+//        fos1.write(97);
+//        fos1.write(98);
+//        fos1.write(99);
+//        fos1.write(100);
+//        fos1.write(101);
+
+        //byte[] bytes1 ={97,98,99,100,101,102};
+        //byte[] getBytes 返回字符串的对应数组
+        byte[] bytes2 = "abcde".getBytes(StandardCharsets.UTF_8);
+        //fos1.write(bytes2);
+
+        fos1.write(bytes2,0,bytes2.length);
         /*
         目标路径下创建了一个123_002.txt文件，并且内容为Hello IO
          */
+
+        //实现换行功能，不同系统对换行符的识别是不同的
+        //windows:\r\n
+        //linux:\n
+        //mac:\r
+//        fos1.write("\r\n".getBytes(StandardCharsets.UTF_8));//换行
+
+        //关闭管道 回收
+        fos.close();
     }
 }
