@@ -1,16 +1,203 @@
 1.创建流对象
     FileOutputStream fos = new FileOutputStream(String name);
+    创建管道，将管道连接至目标文件（若没有文件则创建文件）
+
     getBytes(); 返回一个字节数组
-2.读取内容
-    BufferedReader bufferedReader = new BufferedReader(new FileReader(String filename));
-    bufferedReader.readLine();  //读取文件每行的内容
+        String date = "hello";
+        byte[] bytes = date.getBytes();
+        fos.write(bytes);
+        将字符串转化为字节数组 通过管道把数据写入文件
+
+2.写内容
+    write(int b)  一次写一个字节数据
+    write(byte[] b) 将b.length字节从指定的字节数组写入文件输入流
+    write(byte[] b,int off,int len) 将len字节从指定的字节数组开始,off 为起始索引 len 为写入长度
+        实现换行功能，不同系统对换行符的识别是不同的
+            windows:\r\n
+            linux:\n
+            mac:\r
+
+3.读取内容
+    1.  BufferedReader bufferedReader = new BufferedReader(new FileReader(String filename));
+        bufferedReader.readLine();  //读取文件每行的内容
+
+    1.  BufferedReader(Reader in)
+        BufferedReader(Reader in,int size)
+    2.  BufferedWriter(Writer out)
+        BufferedWriter(Writer out,int size)
+    写入、读取文本，缓冲字符，以字符，数组等高效写入、读取可以指定缓冲区大小,可以使用默认大小，默认值足够大，可用于大多数用途
+        BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+            1.方法
+                (1).writer(); int c, String s 等等
+        BufferedReader bw = new BufferedReader(new FileReader(fileName));
+            1.方法
+                (1).read()
+                (2).char[] chars = new char[1024];
+                    int len;
+                    while ((len=bw.read(chars))!=-1){
+                        System.out.print(new String(chars,0,len));
+                    }
+
+                (3).int ch;
+                    while ((ch=bw.read())!=-1){
+                        System.out.print((char) ch);
+                    }
 
     LineNumberReader lnr = new LineNumberReader(new File(String filename));
     lnr.getLineNumber()+lnr.readLine();   //读取每行行号和内容
     setLineNumber();  //设置起始行号
+4.内存操作流
+    创建字节流
+    创建输出流
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
-3.创建数据输出流对象
+        往内存中写数据
+        byteArrayOutputStream.write("hello".getBytes(StandardCharsets.UTF_8));
+
+        怎么得到内存中的数据？
+        内存输出流本身提供了一个方法可以返回内存中的数据的引用
+        byte[] bytes = byteArrayOutputStream.toByteArray();
+        System.out.println(new String(bytes));//hello
+        不用输入流也可以得到内存中的数据
+
+        用输入流
+        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
+        int ch;
+        while ((ch=byteArrayInputStream.read())!=-1){
+            System.out.print((char) ch);//hello
+        }
+5.创建数据输出流对象
     DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(String filename));
     写数据 八种基本类型和String    dataOutputStream.writeByte() 等等 writeUTF(String)
     DataInputStream dataInputStream = new DataInputStream(new FileInputStream(String filename));
     读数据 一一对应 不能错位       byte b = dataInputStream.readByte(); 等等
+
+6.写数据加异常处理
+    FileOutputStream fos = null; 定义为空,否则会出现指针异常
+    try{
+        fos = new FileOutputStream(fileName);
+        fos.write("hello".getBytes(StandardCharsets.UTF_8));  UTF_8编码标准
+        fos.close;   回收资源
+    }catch(IOException e){
+        e.printStackTrace();
+    }finally{      最终处理
+        if(fos != null){   如果fos不为空,写入内容不为空
+            try{
+                fos.close; 回收资源
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
+    无限套娃
+
+7.FileInputStream(String name)
+    FileInputStream(String name)
+    通过打开与实际文件的连接来创建一个FileInputStream，该文件由文件系统中的路径名name命名
+
+    1.创建字节输入流对象
+        FileInputStream fis = new FileInputStream(fileName);
+    2.调用字节输入流对象读数据方法
+        int read;
+        while((read = fis.read())!=-1){
+            System.out.print((char) read);
+        }
+        若文件内不再有内容，则read()返回值为-1
+    3.释放资源
+        fis.close;
+
+8.复制文件 //文本文档//图片//视频等
+    从一个文件中读取出来(数据源)，再写入到另一个文件中(目的地)
+
+    数据源
+    InputStream --- FileInputStream
+    目的地
+    OutputStream --- FileOutputStream
+
+    FileInputStream fis = new FileInputStream(fileName);//源文件
+    FileOutputStream fos = new FileOutputStream(fileName);//目标文件
+
+    //一次读取一个字节，一次写入一个字节
+    int by;
+    while((by = fis.read())!=-1){
+        fos.write();
+    }
+
+    //一次读一个字节数组数据
+    byte[] bys = new byte[1024];  //通常是1024或者1024的倍数
+    int len;
+    while((len=fis.read(bys))!=-1){
+        System.out.println(new String(bys,0,len));
+        //new一个String 将字节数组转化为字符串输出
+    }
+    fis.close;
+    fos.close;
+
+    BufferedInputStream bis = new BufferedInputStream(new FileInputStream(fileName));
+    BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(fileName));
+
+    byte[] bytes = new byte[1024];
+    int len;
+    while ((len=bis.read(bytes))!=-1){
+        bos.write(bytes);
+    }
+    bis.close();
+    bos.close();
+    //字节缓冲流处理视频更快
+
+9.写入和读取
+    输入字符串
+            String s = "中国";
+        用getBytes方法转化为字节数组后写入
+            byte[] bytes = s.getBytes(StandardCharsets.UTF_8);  //返回一个字节数组bytes
+        写入
+            fos.write(bytes);
+
+        读取
+            fis;
+            采用字节数组方法读取
+            byte[] bytes = new byte[1024];
+            int len;
+            while((len = fis.read(bytes)) != -1){
+                System.out.println(new String(bytes,0,len))
+                ***** new String(byte[],int off,int len); //不要忘
+            }
+            //GBK 占用两个字节
+            //UTF-8 占用三个字节
+
+10.字符串中的编码问题
+    getBytes();
+    getBytes(String charsetName)
+
+    String(byte[] bytes);
+    String(byte[] bytes,String charsetName);
+
+    默认UTF-8  也可在charsetName处设置编码格式 常用还有GBK
+    用什么编码就用什么解码
+
+11.刷新流
+    .flush();
+    字符流写数据不能直接写入文件，而是进入缓冲区，需要缓冲操作才能写入
+    .close(); 先刷新后关闭，避免忘记刷新的操作，但是关闭之后就不能在输入输出了
+
+12.字符流写数据的5中方式
+
+    OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(fileName));
+
+    write(int c)  写一个字符
+    write(char[] cbuf) 写入一个字符数组
+    write(char cbuf,int off,int len) 写入字符数组的一部分
+    write(String str) 写入一个字符串
+    write(String str,int off,int len) 写一个字符串的一部分
+
+13.字符流读数据的两种方式
+    read()   一次读取一个字符数据
+    read(char[] cbuf) 一次读一个字符数组数据
+
+    InputStreamReader isr = new InputStreamReader(new FileInputStream(fileName));
+
+14.上述两种方法的便捷子类
+    FileReader fr = new FileReader(fileName);
+    FileWriter fw = new FileWriter(fileName);
+
+    通用读写操作

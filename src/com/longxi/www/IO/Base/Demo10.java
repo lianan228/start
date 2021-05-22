@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 
 /*
 FileInputStream(String name)
+FileInputStream(String name)
 通过打开与实际文件的连接来创建一个FileInputStream，该文件由文件系统中
 的路径名name命名
 
