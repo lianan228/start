@@ -1,4 +1,4 @@
-package com.longxi.www.Thread;
+package com.longxi.www.Thread.t1;
 
 /*
 龟兔赛跑

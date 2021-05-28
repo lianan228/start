@@ -1,4 +1,4 @@
-package com.longxi.www.Thread;
+package com.longxi.www.Thread.t1;
 /*
 实例
 多个线程同时操作一个同一个对象

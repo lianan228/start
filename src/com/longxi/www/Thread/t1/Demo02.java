@@ -1,6 +1,4 @@
-package com.longxi.www.Thread;
-
-import com.longxi.www.IO.Base.Demo20;
+package com.longxi.www.Thread.t1;
 
 /*
 创建线程方式二，实现runnable接口，重写run方法，执行线程需要丢入runnable接口实现类

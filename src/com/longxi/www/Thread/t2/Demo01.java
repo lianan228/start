@@ -1,10 +1,10 @@
-package com.longxi.www.Thread;
+package com.longxi.www.Thread.t2;
 
 
 //创建线程方式一 继承Thread类  重写run()方法，调用start开启线程
 
 //总结：注意，线程开启不一定立即执行，有cpu调度执行
-public class TestThread01 extends Thread{
+public class Demo01 extends Thread{
     @Override
     public void run() {
         //super.run();线程方法体
@@ -16,7 +16,7 @@ public class TestThread01 extends Thread{
 
     public static void main(String[] args) {
         //创建一个线程对象
-        TestThread01 testThread01 = new TestThread01();
+        Demo01 testThread01 = new Demo01();
 
         //调用start()方法开启线程
         testThread01.start();
