@@ -4,41 +4,56 @@ import com.longxi.www.OOP.Demo05.A;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+/*
+卖票
+ */
 
-public class Test0 {
-    //选择排序
-//    public static void main(String[] args) {
-//        int[] arr = {1, 5, 7, 9, 6};
-//        int k;
-//        int t;
-//        for (int i = 0; i < arr.length - 1; i++) {
-//            k = i;
-//            for (int j = i + 1; j < arr.length; j++) {
-//                if (arr[k] > arr[j]) k = j;
-//            }
-//            if (k != i) {
-//                t = arr[i];
-//                arr[i] = arr[k];
-//                arr[k] = t;
-//            }
-//        }
-//        System.out.println(Arrays.toString(arr));
-//    }
+public class Test0 implements Runnable{
 
-//    public static void main(String[] args) {
-//        int[] a = {7, 6, 7, 9, 1, 2, 6};
-//        for (int i = 0; i < a.length - 1; i++) {
-//            for (int j = i + 1; j < a.length; j++) {
-//                if(a[i]>a[j]){
-//                    int tmp = a[i];
-//                    a[i] = a[j];
-//                    a[j] = tmp;
-//                }
-//            }
-//        }
-//        System.out.println(Arrays.toString(a));
-//    }
+    private int tickets = 100;
+    private int x = 0;
+    private Object obj = new Object();
+
+    @Override
+    public void run() {
+        while (true) {
+            if (x % 2 == 0) {
+                synchronized (obj) {
+                    if (tickets > 0) {
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+                        System.out.println(Thread.currentThread().getName() + "窗口1" + tickets + "票");
+                        tickets--;
+                    }
+                }
+            } else {
+                synchronized (obj) {
+                    if (tickets > 0) {
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+                        System.out.println(Thread.currentThread().getName() + "窗口1" + tickets + "票");
+                        tickets--;
+                    }
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
+        Test0 my = new Test0();
 
+        Thread ty1 = new Thread(my,"");
+
+        ty1.start();
     }
 }

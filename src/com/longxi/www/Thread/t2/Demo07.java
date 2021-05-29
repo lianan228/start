@@ -5,7 +5,7 @@ package com.longxi.www.Thread.t2;
  */
 public class Demo07 implements Runnable{
     private int tickets = 1000;
-    private final Object obj = new Object();//锁
+    //private final Object obj = new Object();//锁
     private int x = 0;
 
     @Override

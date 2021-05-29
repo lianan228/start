@@ -16,13 +16,13 @@ public class Demo02 extends Thread{
 
     public static void main(String[] args) {
 //        1
-//        Demo02 demo02 = new Demo02();
-//        Demo02 demo02_1 = new Demo02();
-//
-//
-//        //设置线程名称 setName(String name);
-//        demo02.setName("高铁");
-//        demo02_1.setName("飞机");
+        Demo02 demo02 = new Demo02();
+        Demo02 demo02_1 = new Demo02();
+
+
+        //设置线程名称 setName(String name);
+        demo02.setName("高铁");
+        demo02_1.setName("飞机");
 
 //      2
         Demo02 my1 = new Demo02("高铁");
