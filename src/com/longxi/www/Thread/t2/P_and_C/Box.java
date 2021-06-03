@@ -30,7 +30,7 @@ public class Box {
 
     public synchronized void get() {
         //如果没有牛奶，等待生产
-        if(!state){
+        if(!state){   //state = false  如果!state为真 则说明state为假 没有牛奶
             try {
                 wait();
             } catch (InterruptedException e) {
