@@ -5,7 +5,7 @@ public class UnsafeBank {
         //账户
         Account account = new Account(100, "结婚基金");
         Drawing you = new Drawing(account, 50, "你");
-        Drawing her = new Drawing(account, 100, "她");
+        Drawing her = new Drawing(account, 50, "她");
 
 
         you.start();

@@ -6,12 +6,13 @@ package com.longxi.www.Thread.t1;
 并发
  */
 
-//不安全案例
 public class Demo14 {
 
     public static void main(String[] args) {
-        BuyTicket station = new BuyTicket();
+        BuyTicket station = new BuyTicket();//创建同一对象，共享同一资源
 
+
+        //传递同一个对象
         new Thread(station,"1").start();
         new Thread(station,"2").start();
         new Thread(station,"3").start();
@@ -22,7 +23,7 @@ public class Demo14 {
 
 class BuyTicket implements Runnable{
 
-    private int ticketNum = 10;
+    private int ticketNum = 1000;
     boolean flag = true;//外部停止方式
 
     @Override
@@ -45,7 +46,7 @@ class BuyTicket implements Runnable{
             return;
         }
 
-        Thread.sleep(1000);
+        Thread.sleep(1);
         System.out.println(Thread.currentThread().getName()+"拿到"+ticketNum--);
     }
 }
